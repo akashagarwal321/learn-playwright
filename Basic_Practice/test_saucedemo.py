@@ -7,6 +7,8 @@ with sync_playwright() as p:
     
     page.wait_for_timeout(200)
 
+    assert page.url == "https://www.saucedemo.com/"
+
     page.fill("#user-name", "standard_user")
 
     page.wait_for_timeout(200)
